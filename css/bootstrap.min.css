@@ -6,17 +6,34 @@
 /*# sourceMappingURL=bootstrap.min.css.map */
 
 
-/* !!!Roberto!!! */
+/* !!! Roberto !!! */
 body {
-    padding-top: 75px; /* Compensa a navbar fixa */
+    padding-top: 75px;
 }
-
-.img-logo-agencia{
+.img-logo-agencia {
     width: 50px;
     height: 50px;
     border-radius: 25px;
     padding: 5px;
 }
-.bg-cinza-claro{
-background-color: #d4d4d4;
+.bg-cinza{
+    background-color: #828282;
+}
+.bg-cinza-claro {
+    background-color: #d4d4d4;
+}
+.bg-cinza-escuro{
+    background-color: #474747;
+}
+.btn-primary {
+    background-color: #4c4c4c;
+    border-color: #4c4c4c;
+}
+.btn-primary:hover {
+    background-color: #181818;
+    border-color: #181818;
+}
+.navbar-nav .nav-link.active {
+    border-bottom: 3px solid #4c4c4c;
+    font-weight: bold;
 }
