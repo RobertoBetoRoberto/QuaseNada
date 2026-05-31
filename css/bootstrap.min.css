@@ -25,15 +25,15 @@ body {
 .bg-cinza-escuro{
     background-color: #474747;
 }
-.btn-primary {
+.btn-primary{
     background-color: #4c4c4c;
     border-color: #4c4c4c;
 }
-.btn-primary:hover {
+.btn-primary:hover{
     background-color: #181818;
     border-color: #181818;
 }
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link.active{
     border-bottom: 3px solid #4c4c4c;
     font-weight: bold;
 }

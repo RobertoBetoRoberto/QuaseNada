@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <script src="./js/bootstrap.bundle.min.js"></script>
     <title>Auto Leste</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-cinza-claro navbar-light fixed-top">
+    <a href="#main-content" class="visually-hidden-focusable">Pular para o conteúdo principal</a>
+    <nav class="navbar navbar-expand-lg bg-cinza-claro navbar-light fixed-top" aria-label="Menu principal">
         <div class="container">
-            <a class="navbar-brand" href="./index.html"><img src="./img/logo-agencia.svg" alt="logo da página" class="img-logo-agencia"></a>
-            <a class="navbar-brand">Auto Leste</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html" aria-label="Auto Leste - Página Inicial">
+                <img src="./img/logo-agencia.svg" alt="" role="presentation" class="img-logo-agencia">
+                <span>Auto Leste</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-expanded="false" aria-label="Alternar menu de navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">🚘Meu Estoque</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">💬Mensagens (3)</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">👤Meu Perfil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">➡️Sair</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">Meu Estoque</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mensagens <span class="badge bg-danger rounded-pill" aria-label="3 mensagens não lidas">(3)</span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Meu Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sair</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container">
+    <main id="main-content" class="container" tabindex="-1">
         <div class="d-flex justify-content-between align-items-stretch gap-4 mb-5">
             <div class="flex-grow-1">
                 <h1>Bem vinda, Agência Auto Leste</h1>
@@ -33,7 +40,7 @@
             </div>
             <div class="d-flex align-items-center">
                 <button class="btn btn-primary btn-lg px-4 py-3">
-                    ➕ Cadastrar Novo Veículo
+                    <span aria-hidden="true">+</span> Cadastrar Novo Veículo
                 </button>
             </div>
         </div>
@@ -51,7 +58,8 @@
                     <p class="text-secondary mb-1">Visualizações do Mês</p>
                     <p class="display-5 fw-bold mb-2">1.248</p>
                     <p class="text-secondary small mb-1">+18% em relação ao mês anterior</p>
-                    <p class="text-secondary small">↗</p>
+                    <p class="text-secondary small" aria-hidden="true">↗</p>
+                    <span class="visually-hidden">Aumento de 18 por cento</span>
                 </div>
             </div>
             <div class="col">
@@ -65,7 +73,7 @@
                 <div class="card p-3 text-center h-100">
                     <p class="text-secondary mb-1">Detalhes do Plano</p>
                     <p class="display-6 fw-bold mb-2">Profissional</p>
-                    <p class="text-secondary small">Renova em 11/09/2001</p>
+                    <p class="text-secondary small">Renova em 11/09/2026</p>
                 </div>
             </div>
             <div class="col">
@@ -73,41 +81,47 @@
                     <p class="text-secondary mb-1">Uso do Plano</p>
                     <p class="display-6 fw-bold text-nowrap mb-2">8/15 anúncios</p>
                     <div class="progress" style="height: 30px;">
-                        <div class="progress-bar bg-dark" style="width: 53.33%;" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="15">                        
+                        <div class="progress-bar bg-dark" style="width: 53.33%;" 
+                             role="progressbar" 
+                             aria-valuenow="8" 
+                             aria-valuemin="0" 
+                             aria-valuemax="15"
+                             aria-label="8 de 15 anúncios, 53% usado">
                         </div>
                     </div>
                     <p class="text-secondary small mt-2">Você pode cadastrar mais 7 veículos</p>
-                    <button class="btn btn-outline-secondary btn-sm mt-3 w-100">
-                        Ver detalhes do plano
-                    </button>
+                    <button class="btn btn-outline-secondary btn-sm mt-3 w-100">Ver detalhes do plano</button>
                 </div>
             </div>
-        </div>    
+        </div>
         <div class="row g-4 mb-5">
             <div class="col-md-9">
                 <div class="card p-3 h-100">
-                    <h5 class="mb-3">Meus Veículos</h5>                    
+                    <h2 class="h5 mb-3">Meus Veículos</h2>
                     <div class="d-flex justify-content-between align-items-center gap-3 mb-3">
                         <div class="input-group" style="width: 300px;">
-                            <span class="input-group-text">🔍</span>
-                            <input type="text" class="form-control" placeholder="Buscar veículo...">
+                            <span class="input-group-text" aria-hidden="true">🔍</span>
+                            <label for="buscarVeiculo" class="visually-hidden">Buscar veículo</label>
+                            <input type="text" id="buscarVeiculo" class="form-control" placeholder="Buscar veículo..." aria-describedby="buscarHelp">
+                            <div id="buscarHelp" class="visually-hidden">Digite modelo, marca ou ano do veículo</div>
                         </div>
+                        
                         <div class="d-flex gap-2">
                             <div class="dropdown">
-                                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="statusDropdown">
                                     Status: Todos
                                 </button>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu" aria-labelledby="statusDropdown">
                                     <li><a class="dropdown-item" href="#">Todos</a></li>
                                     <li><a class="dropdown-item" href="#">Ativos</a></li>
                                     <li><a class="dropdown-item" href="#">Pausados</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown">
-                                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="ordenarDropdown">
                                     Ordenar: Mais Recentes
                                 </button>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu" aria-labelledby="ordenarDropdown">
                                     <li><a class="dropdown-item" href="#">Mais Recentes</a></li>
                                     <li><a class="dropdown-item" href="#">Mais Antigos</a></li>
                                     <li><a class="dropdown-item" href="#">Mais Visualizados</a></li>
@@ -116,167 +130,121 @@
                         </div>
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-hover align-middle">
+                        <p id="tabelaVeiculosDesc" class="visually-hidden">Tabela com veículos cadastrados, mostrando nome, ano, preço, status, visualizações e ações</p>
+                        <table class="table table-hover align-middle" aria-label="Lista de veículos cadastrados" aria-describedby="tabelaVeiculosDesc">
                             <thead>
                                 <tr>
-                                    <th>Veículo</th>
-                                    <th>Ano</th>
-                                    <th>Preço</th>
-                                    <th>Status</th>
-                                    <th>Visualizações</th>
-                                    <th>Ações</th>
+                                    <th scope="col">Veículo</th>
+                                    <th scope="col">Ano</th>
+                                    <th scope="col">Preço</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Visualizações</th>
+                                    <th scope="col">Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>
+                                    <th scope="row">
                                         <div class="d-flex align-items-center gap-2">
-                                            <img src="https://placehold.co/50x40" alt="Honda Civic" class="rounded" style="object-fit: cover;">
+                                            <img src="https://placehold.co/50x40" alt="" role="presentation" class="rounded" style="object-fit: cover;">
                                             <span>Honda Civic</span>
                                         </div>
-                                    </td>
+                                    </th>
                                     <td>2020</td>
                                     <td>R$ 89.900</td>
-                                    <td><span class="badge bg-cinza">Ativo</span></td>
+                                    <td><span class="badge bg-cinza" role="status">Ativo</span></td>
                                     <td>234</td>
                                     <td>
                                         <div class="d-flex gap-1">
-                                            <button class="btn btn-sm btn-outline-secondary">Editar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Pausar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">⋮</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Editar Honda Civic">Editar</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Pausar anúncio do Honda Civic">Pausar</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Mais opções para Honda Civic" aria-haspopup="true">
+                                                <span aria-hidden="true">⋮</span>
+                                            </button>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <th scope="row">
                                         <div class="d-flex align-items-center gap-2">
-                                            <img src="https://placehold.co/50x40" alt="Toyota Corolla" class="rounded" style="object-fit: cover;">
+                                            <img src="https://placehold.co/50x40" alt="" role="presentation" class="rounded" style="object-fit: cover;">
                                             <span>Toyota Corolla</span>
                                         </div>
-                                    </td>
+                                    </th>
                                     <td>2022</td>
                                     <td>R$ 115.000</td>
-                                    <td><span class="badge bg-cinza">Ativo</span></td>
+                                    <td><span class="badge bg-cinza" role="status">Ativo</span></td>
                                     <td>189</td>
                                     <td>
                                         <div class="d-flex gap-1">
-                                            <button class="btn btn-sm btn-outline-secondary">Editar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Pausar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">⋮</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Editar Toyota Corolla">Editar</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Pausar anúncio do Toyota Corolla">Pausar</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Mais opções para Toyota Corolla" aria-haspopup="true">
+                                                <span aria-hidden="true">⋮</span>
+                                            </button>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <th scope="row">
                                         <div class="d-flex align-items-center gap-2">
-                                            <img src="https://placehold.co/50x40" alt="Hyundai HB20" class="rounded" style="object-fit: cover;">
-                                            <span>Hyundai HB20</span>
+                                            <img src="https://placehold.co/50x40" alt="" role="presentation" class="rounded" style="object-fit: cover;">
+                                            <span>Volkswagen Golf</span>
                                         </div>
-                                    </td>
-                                    <td>2021</td>
-                                    <td>R$ 72.500</td>
-                                    <td><span class="badge bg-cinza-escuro">Pausado</span></td>
-                                    <td>45</td>
-                                    <td>
-                                        <div class="d-flex gap-1">
-                                            <button class="btn btn-sm btn-outline-secondary">Editar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Ativar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">⋮</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center gap-2">
-                                            <img src="https://placehold.co/50x40" alt="Volkswagen Gol" class="rounded" style="object-fit: cover;">
-                                            <span>Volkswagen Gol</span>
-                                        </div>
-                                    </td>
-                                    <td>2019</td>
-                                    <td>R$ 49.900</td>
-                                    <td><span class="badge bg-cinza">Ativo</span></td>
+                                    </th>
+                                    <td>2018</td>
+                                    <td>R$ 95.000</td>
+                                    <td><span class="badge bg-cinza" role="status">Ativo</span></td>
                                     <td>312</td>
                                     <td>
                                         <div class="d-flex gap-1">
-                                            <button class="btn btn-sm btn-outline-secondary">Editar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Pausar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">⋮</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Editar Volkswagen Golf">Editar</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Pausar anúncio do Volkswagen Golf">Pausar</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Mais opções para Volkswagen Golf" aria-haspopup="true">
+                                                <span aria-hidden="true">⋮</span>
+                                            </button>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <th scope="row">
                                         <div class="d-flex align-items-center gap-2">
-                                            <img src="https://placehold.co/50x40" alt="Ford Ka" class="rounded" style="object-fit: cover;">
-                                            <span>Ford Ka</span>
-                                        </div>
-                                    </td>
-                                    <td>2021</td>
-                                    <td>R$ 55.800</td>
-                                    <td><span class="badge bg-cinza">Ativo</span></td>
-                                    <td>167</td>
-                                    <td>
-                                        <div class="d-flex gap-1">
-                                            <button class="btn btn-sm btn-outline-secondary">Editar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Pausar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">⋮</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center gap-2">
-                                            <img src="https://placehold.co/50x40" alt="Chevrolet Onix" class="rounded" style="object-fit: cover;">
+                                            <img src="https://placehold.co/50x40" alt="" role="presentation" class="rounded" style="object-fit: cover;">
                                             <span>Chevrolet Onix</span>
                                         </div>
-                                    </td>
-                                    <td>2023</td>
-                                    <td>R$ 95.000</td>
-                                    <td><span class="badge bg-cinza">Ativo</span></td>
-                                    <td>423</td>
-                                    <td>
-                                        <div class="d-flex gap-1">
-                                            <button class="btn btn-sm btn-outline-secondary">Editar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Pausar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">⋮</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center gap-2">
-                                            <img src="https://placehold.co/50x40" alt="Jeep Renegade" class="rounded" style="object-fit: cover;">
-                                            <span>Jeep Renegade</span>
-                                        </div>
-                                    </td>
-                                    <td>2022</td>
-                                    <td>R$ 132.000</td>
-                                    <td><span class="badge bg-cinza-escuro">Pausado</span></td>
-                                    <td>89</td>
-                                    <td>
-                                        <div class="d-flex gap-1">
-                                            <button class="btn btn-sm btn-outline-secondary">Editar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Ativar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">⋮</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center gap-2">
-                                            <img src="https://placehold.co/50x40" alt="Nissan Kicks" class="rounded" style="object-fit: cover;">
-                                            <span>Nissan Kicks</span>
-                                        </div>
-                                    </td>
+                                    </th>
                                     <td>2021</td>
-                                    <td>R$ 108.500</td>
-                                    <td><span class="badge bg-cinza">Ativo</span></td>
-                                    <td>276</td>
+                                    <td>R$ 68.500</td>
+                                    <td><span class="badge bg-secondary" role="status">Pausado</span></td>
+                                    <td>425</td>
                                     <td>
                                         <div class="d-flex gap-1">
-                                            <button class="btn btn-sm btn-outline-secondary">Editar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Pausar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">⋮</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Editar Chevrolet Onix">Editar</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Ativar anúncio do Chevrolet Onix">Ativar</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Mais opções para Chevrolet Onix" aria-haspopup="true">
+                                                <span aria-hidden="true">⋮</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="https://placehold.co/50x40" alt="" role="presentation" class="rounded" style="object-fit: cover;">
+                                            <span>Ford Ka</span>
+                                        </div>
+                                    </th>
+                                    <td>2019</td>
+                                    <td>R$ 49.900</td>
+                                    <td><span class="badge bg-cinza" role="status">Ativo</span></td>
+                                    <td>98</td>
+                                    <td>
+                                        <div class="d-flex gap-1">
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Editar Ford Ka">Editar</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Pausar anúncio do Ford Ka">Pausar</button>
+                                            <button class="btn btn-sm btn-outline-secondary" aria-label="Mais opções para Ford Ka" aria-haspopup="true">
+                                                <span aria-hidden="true">⋮</span>
+                                            </button>
                                         </div>
                                     </td>
                                 </tr>
@@ -284,42 +252,29 @@
                         </table>
                     </div>
                     <div class="text-center mt-2">
-                        <a href="#" class="btn btn-sm btn-outline-secondary">Ver todos os anúncios →</a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary">Ver todos os anúncios <span aria-hidden="true">→</span></a>
                     </div>
                 </div>
-            </div>
+            </div>    
             <div class="col-md-3">
-                <div class="card p-3">
-                    <h5 class="mb-3">Atalhos Rápidos</h5>
-                    <div class="d-flex flex-column gap-3">
-                        <a href="#" class="text-decoration-none text-dark fs-5">
-                            🚗 Cadastrar Veículo
-                        </a>
-                        <a href="#" class="text-decoration-none text-dark fs-5">
-                            📦 Ver Meu Estoque
-                        </a>
-                        <a href="#" class="text-decoration-none text-dark fs-5">
-                            💬 Mensagens
-                        </a>
-                        <a href="#" class="text-decoration-none text-dark fs-5">
-                            📊 Desempenho
-                        </a>
-                        <a href="#" class="text-decoration-none text-dark fs-5">
-                            ❓ Ajuda e Dúvidas
-                        </a>
-                    </div>
-                </div>
+                <nav class="card p-3" aria-label="Atalhos Rápidos">
+                    <h2 class="h5 mb-3">Atalhos Rápidos</h2>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li><a href="#" class="text-decoration-none text-dark fs-5">Cadastrar Veículo</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark fs-5">Ver Meu Estoque</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark fs-5">Mensagens</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark fs-5">Desempenho</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark fs-5">Ajuda e Dúvidas</a></li>
+                    </ul>
+                </nav>
                 <div class="card p-3 mt-4">
-                    <h5 class="mb-2">💡 Ideias para vender mais</h5>
-                    <p class="text-secondary small mb-3">
-                        Complete todas as informações do seu veículo e adicione boas fotos
-                    </p>
-                    <button class="btn btn-outline-secondary btn-sm w-100">
-                        Ver dicas
-                    </button>
+                    <h2 class="h5 mb-2">Ideias para vender mais</h2>
+                    <p class="text-secondary small mb-3">Complete todas as informações do seu veículo e adicione boas fotos</p>
+                    <button class="btn btn-outline-secondary btn-sm w-100" aria-label="Ver dicas de como vender mais">Ver dicas</button>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
