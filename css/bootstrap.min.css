@@ -37,3 +37,13 @@ body {
     border-bottom: 3px solid #4c4c4c;
     font-weight: bold;
 }
+
+/*Preciso para deixar a caceta da imagem em 100%n da buceta do quadrado aaaaaaaaaaaaaa*/
+.espaço_disgraça{
+    padding-right: 50px; 
+}
+
+.img100{
+    height: 100%;
+    width: 100%;
+}
