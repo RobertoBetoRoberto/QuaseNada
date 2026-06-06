@@ -7,9 +7,6 @@
 
 
 /* !!! Roberto !!! */
-body {
-    padding-top: 75px;
-}
 .img-logo-agencia {
     width: 50px;
     height: 50px;
@@ -20,30 +17,22 @@ body {
     background-color: #828282;
 }
 .bg-cinza-claro {
-    background-color: #d4d4d4;
-}
-.bg-cinza-escuro{
-    background-color: #474747;
+    background-color: #0b1a33;
 }
 .btn-primary{
-    background-color: #4c4c4c;
-    border-color: #4c4c4c;
+    background-color: #e67e22;
+    border-color: #e67e22;
 }
 .btn-primary:hover{
-    background-color: #181818;
-    border-color: #181818;
+    background-color: #ae5202;
+    border-color: #ae5202;
 }
 .navbar-nav .nav-link.active{
-    border-bottom: 3px solid #4c4c4c;
+    border-bottom: 3px solid #ae5202;
     font-weight: bold;
 }
-
-/*Preciso para deixar a caceta da imagem em 100%n da buceta do quadrado aaaaaaaaaaaaaa*/
-.espaço_disgraça{
-    padding-right: 50px; 
-}
-
-.img100{
-    height: 100%;
-    width: 100%;
+.btn-outline-secondary{
+    background-color: #e67e22;
+    border-color: #e67e22;
+    color: white;
 }
