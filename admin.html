@@ -3,327 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Administrador – Agência</title>
+
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <title>Administrador</title>
+
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-cinza-claro navbar-dark fixed-top">
+
+    <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo principal</a>
+
+    <nav
+        class="navbar navbar-expand-lg bg-cinza-claro navbar-dark fixed-top"
+        aria-label="Navegação principal"
+    >
         <div class="container">
-            <a class="navbar-brand" href="./index.html"><img src="./img/logo-agencia.svg" alt="logo da página" class="img-logo-agencia"></a>
-            <a class="navbar-brand">Painel do Administrador</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+            <a class="navbar-brand" href="./index.html">
+                <img
+                    src="./img/logo-agencia.svg"
+                    alt="Ir para a página inicial da agência"
+                    class="img-logo-agencia"
+                >
+            </a>
+
+            <span class="navbar-brand">Painel do Administrador</span>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Abrir ou fechar menu de navegação"
+            >
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Clientes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">💬Mensagens(3)</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Administrador</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">➡️Sair</a></li>
+                <ul class="navbar-nav ms-auto" role="list">
+
+                    <li class="nav-item" role="listitem">
+                        <a class="nav-link active" href="#" aria-current="page">Clientes</a>
+                    </li>
+
+                    <li class="nav-item" role="listitem">
+                        <a class="nav-link" href="#" aria-label="Mensagens, 3 não lidas">
+                            💬 Mensagens
+                            <span class="badge bg-danger ms-1" aria-hidden="true">3</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item" role="listitem">
+                        <a class="nav-link" href="#">Administrador</a>
+                    </li>
+
+                    <li class="nav-item" role="listitem">
+                        <a class="nav-link" href="#" aria-label="Sair do sistema">➡️ Sair</a>
+                    </li>
+
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container mb-5 mt-5">
-        <div class="d-flex justify-content-between align-items-stretch gap-4 mt-5 mb-5">
-            <div class="flex-grow-1 mb-5 mt-5">
-                <h1>Bem vinda ao Painel do Administrador</h1>
-                <p>Visão Geral</p>
+
+    <main id="conteudo-principal" class="container pt-5 mt-3" tabindex="-1">
+
+        <header class="d-flex justify-content-between align-items-stretch gap-4 mb-5">
+            <div class="flex-grow-1">
+                <h1>Bem-vinda ao Painel do Administrador</h1>
+                <p class="text-secondary">Visão Geral</p>
             </div>
             <div class="d-flex align-items-center">
-                <button class="btn btn-primary btn-lg px-4 py-3">
-                    + Cadastrar Nova Agencia
+                <button class="btn btn-primary btn-lg px-4 py-3" type="button">
+                    ➕ Cadastrar Nova Agência
                 </button>
             </div>
-        </div>
-        <div class="row g-4 mb-5">
-            <div class="col">
-                <div class="card p-3 text-center h-100">
-                    <p class="text-secondary mb-1">Agências Ativas</p>
-                    <p class="display-5 fw-bold mb-2">1.248</p>
-                    <p class="text-secondary small mb-1"> +8,2% vs mês anterior</p>
+        </header>
+        <section aria-labelledby="titulo-kpis">
+            <h2 id="titulo-kpis" class="visually-hidden">Indicadores de desempenho</h2>
+
+            <div class="row g-4 mb-5" role="list" aria-label="Indicadores de desempenho">
+
+                <div class="col" role="listitem">
+                    <article class="card p-3 text-center h-100" aria-label="Agências Ativas: 1.248, alta de 8,2% em relação ao mês anterior">
+                        <p class="text-secondary mb-1" aria-hidden="true">Agências Ativas</p>
+                        <p class="display-5 fw-bold mb-2" aria-hidden="true">1.248</p>
+                        <p class="text-secondary small mb-0" aria-hidden="true">+8,2% vs mês anterior</p>
+                    </article>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card p-3 text-center h-100">
-                    <p class="text-secondary mb-1">Agencias Pendentes</p>
-                    <p class="display-5 fw-bold mb-2">36</p>
-                    <p class="text-secondary small mb-1"> +8,2% vs mês anterior</p>
-                    <p class="text-secondary small">↗</p>
+
+                <div class="col" role="listitem">
+                    <article class="card p-3 text-center h-100" aria-label="Agências Pendentes: 36, alta de 8,2% em relação ao mês anterior">
+                        <p class="text-secondary mb-1" aria-hidden="true">Agências Pendentes</p>
+                        <p class="display-5 fw-bold mb-2" aria-hidden="true">36</p>
+                        <p class="text-secondary small mb-0" aria-hidden="true">+8,2% vs mês anterior</p>
+                    </article>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card p-3 text-center h-100">
-                    <p class="text-secondary mb-1">Veiculos Publicados</p>
-                    <p class="display-5 fw-bold mb-2">24.789</p>
-                    <p class="text-secondary small">+12% vs mês anterior</p>
+
+                <div class="col" role="listitem">
+                    <article class="card p-3 text-center h-100" aria-label="Veículos Publicados: 24.789, alta de 12% em relação ao mês anterior">
+                        <p class="text-secondary mb-1" aria-hidden="true">Veículos Publicados</p>
+                        <p class="display-5 fw-bold mb-2" aria-hidden="true">24.789</p>
+                        <p class="text-secondary small mb-0" aria-hidden="true">+12% vs mês anterior</p>
+                    </article>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card p-3 text-center h-100">
-                    <p class="text-secondary mb-1">Leads / Mensagens</p>
-                    <p class="display-6 fw-bold mb-2">3,562</p>
-                    <p class="text-secondary small">+12,6% vs mÊs anterior</p>
+
+                <div class="col" role="listitem">
+                    <article class="card p-3 text-center h-100" aria-label="Leads e Mensagens: 3.562, alta de 12,6% em relação ao mês anterior">
+                        <p class="text-secondary mb-1" aria-hidden="true">Leads / Mensagens</p>
+                        <p class="display-6 fw-bold mb-2" aria-hidden="true">3.562</p>
+                        <p class="text-secondary small mb-0" aria-hidden="true">+12,6% vs mês anterior</p>
+                    </article>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card p-3 text-center h-100">
-                    <p class="text-secondary mb-1">Receita Mensal</p>
-                    <p class="display-6 fw-bold text-nowrap mb-2">R$ 1,2486,900</p>
-                    <p class="text-secondary small mt-2">Você pode cadastrar mais 7 veículos</p>
-                    <p class="text-secondary small">+18,7% vs mês anterior</p>                    
+
+                <div class="col" role="listitem">
+                    <article class="card p-3 text-center h-100" aria-label="Receita Mensal: R$ 1.248.900, alta de 18,7% em relação ao mês anterior">
+                        <p class="text-secondary mb-1" aria-hidden="true">Receita Mensal</p>
+                        <p class="display-6 fw-bold text-nowrap mb-2" aria-hidden="true">R$ 1.248.900</p>
+                        <p class="text-secondary small mb-0" aria-hidden="true">+18,7% vs mês anterior</p>
+                    </article>
                 </div>
+
             </div>
-        </div>    
-        <div class="row g-4 mb-7">
-            <div class="col-md-12">
-                <div class="card p-3 h-100">
-                    <h5 class="mb-3">Aprovação de Agnências</h5>                    
-                    <div class="d-flex justify-content-between align-items-center gap-3 mb-3">
-                        <div class="d-flex gap-2">
-                            <div class="dropdown">
-                                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                    Status: Todos
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Todos</a></li>
-                                    <li><a class="dropdown-item" href="#">Ativos</a></li>
-                                    <li><a class="dropdown-item" href="#">Pausados</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown">
-                                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                    Ordenar: Mais Recentes
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Mais Recentes</a></li>
-                                    <li><a class="dropdown-item" href="#">Mais Antigos</a></li>
-                                    <li><a class="dropdown-item" href="#">Mais Visualizados</a></li>
-                                </ul>
-                            </div>
+        </section>
+        <section aria-labelledby="titulo-aprovacao" class="mb-5">
+            <div class="card p-3">
+                <h2 id="titulo-aprovacao" class="h5 mb-3">Aprovação de Agências</h2>
+
+                <div
+                    class="d-flex justify-content-between align-items-center gap-3 mb-3"
+                    role="group"
+                    aria-label="Filtros da lista de agências"
+                >
+                    <div class="d-flex gap-2">
+
+                        <div class="dropdown">
+                            <button
+                                class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                                type="button"
+                                id="filtro-status"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                            >
+                                Status: Todos
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="filtro-status" role="menu">
+                                <li role="none"><a class="dropdown-item" href="#" role="menuitem">Todos</a></li>
+                                <li role="none"><a class="dropdown-item" href="#" role="menuitem">Ativos</a></li>
+                                <li role="none"><a class="dropdown-item" href="#" role="menuitem">Pausados</a></li>
+                            </ul>
                         </div>
+
+                        <div class="dropdown">
+                            <button
+                                class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                                type="button"
+                                id="filtro-ordem"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                            >
+                                Ordenar: Mais Recentes
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="filtro-ordem" role="menu">
+                                <li role="none"><a class="dropdown-item" href="#" role="menuitem">Mais Recentes</a></li>
+                                <li role="none"><a class="dropdown-item" href="#" role="menuitem">Mais Antigos</a></li>
+                                <li role="none"><a class="dropdown-item" href="#" role="menuitem">Mais Visualizados</a></li>
+                            </ul>
+                        </div>
+
                     </div>
-                    <div class="table-responsive">
-                        <table class="table table-hover align-middle">
-                            <thead>
-                                <tr>
-                                    <th>Agência</th>
-                                    <th>Cidade / Região</th>
-                                    <th>Plano</th>
-                                    <th>Data de Cadastro</th>
-                                    <th>Status</th>
-                                    <th>Ações</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center gap-2">
-                                            <span>Auto Sul Motors</span>
-                                        </div>
-                                    </td>
-                                    <td>Curitiba / PR</td>
-                                    <td>Profissional</td>
-                                    <td>14/05/2024</td>
-                                    <td><span class="badge bg-cinza"</span>Pendente</td>
-                                    <td>
-                                        <div class="d-flex gap-1">
-                                           <button class="btn btn-sm btn-outline-secondary">Aprovar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Ver Cadastro</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Desativar</button>   
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center gap-2">
-                                            <span>Prime Veiculos</span>
-                                        </div>
-                                    </td>
-                                    <td>Belo Horizonte / MG</td>
-                                    <td>Básico</td>
-                                    <td>14/05/2024</td>
-                                    <td><span class="badge bg-cinza">Pendente</span></td>
-                                    <td>
-                                        <div class="d-flex gap-1">
-                                            <button class="btn btn-sm btn-outline-secondary">Aprovar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Ver Cadastro</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Desativar</button>   
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center gap-2">
-                                            <span>Fast Car Multimarcas</span>
-                                        </div>
-                                    </td>
-                                    <td>Campinas / SP</td>
-                                    <td>Profissional</td>
-                                    <td>14/06/2024</td>
-                                    <td><span class="badge bg-cinza">Pendente</span></td>
-                                    <td>
-                                        <div class="d-flex gap-1">
-                                             <button class="btn btn-sm btn-outline-secondary">Aprovar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Ver Cadastro</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Desativar</button>   
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center gap-2">
-                                            <span>Top Motors</span>
-                                        </div>
-                                    </td>
-                                    <td>Porto Alegre / RS</td>
-                                    <td>Premium</td>
-                                    <td>13/05/2024</td>
-                                    <td><span class="badge bg-cinza">Pendente</span></td>
-                                    <td>
-                                        <div class="d-flex gap-1">
-                                             <button class="btn btn-sm btn-outline-secondary">Aprovar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Ver Cadastro</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Desativar</button>   
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center gap-2">
-                                            <span>Via Norte Veiculos</span>
-                                        </div>
-                                    </td>
-                                    <td>Manaus / AM</td>
-                                    <td>Básico</td>
-                                    <td>12/05/2024</td>
-                                    <td><span class="badge bg-cinza">Pendente</span></td>
-                                    <td>
-                                        <div class="d-flex gap-1">
-                                            <button class="btn btn-sm btn-outline-secondary">Aprovar</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Ver Cadastro</button>
-                                            <button class="btn btn-sm btn-outline-secondary">Desativar</button>                                            
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <caption class="visually-hidden">Lista de agências pendentes de aprovação</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Agência</th>
+                                <th scope="col">Cidade / Região</th>
+                                <th scope="col">Plano</th>
+                                <th scope="col">Data de Cadastro</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>Auto Sul Motors</td>
+                                <td>Curitiba / PR</td>
+                                <td>Profissional</td>
+                                <td><time datetime="2024-05-14">14/05/2024</time></td>
+                                <td><span class="badge bg-secondary">Pendente</span></td>
+                                <td>
+                                    <div class="d-flex gap-1" role="group" aria-label="Ações para Auto Sul Motors">
+                                        <button class="btn btn-sm btn-outline-success" type="button">Aprovar</button>
+                                        <button class="btn btn-sm btn-outline-secondary" type="button">Ver Cadastro</button>
+                                        <button class="btn btn-sm btn-outline-danger" type="button">Desativar</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Prime Veículos</td>
+                                <td>Belo Horizonte / MG</td>
+                                <td>Básico</td>
+                                <td><time datetime="2024-05-14">14/05/2024</time></td>
+                                <td><span class="badge bg-secondary">Pendente</span></td>
+                                <td>
+                                    <div class="d-flex gap-1" role="group" aria-label="Ações para Prime Veículos">
+                                        <button class="btn btn-sm btn-outline-success" type="button">Aprovar</button>
+                                        <button class="btn btn-sm btn-outline-secondary" type="button">Ver Cadastro</button>
+                                        <button class="btn btn-sm btn-outline-danger" type="button">Desativar</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Fast Car Multimarcas</td>
+                                <td>Campinas / SP</td>
+                                <td>Profissional</td>
+                                <td><time datetime="2024-06-14">14/06/2024</time></td>
+                                <td><span class="badge bg-secondary">Pendente</span></td>
+                                <td>
+                                    <div class="d-flex gap-1" role="group" aria-label="Ações para Fast Car Multimarcas">
+                                        <button class="btn btn-sm btn-outline-success" type="button">Aprovar</button>
+                                        <button class="btn btn-sm btn-outline-secondary" type="button">Ver Cadastro</button>
+                                        <button class="btn btn-sm btn-outline-danger" type="button">Desativar</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Top Motors</td>
+                                <td>Porto Alegre / RS</td>
+                                <td>Premium</td>
+                                <td><time datetime="2024-05-13">13/05/2024</time></td>
+                                <td><span class="badge bg-secondary">Pendente</span></td>
+                                <td>
+                                    <div class="d-flex gap-1" role="group" aria-label="Ações para Top Motors">
+                                        <button class="btn btn-sm btn-outline-success" type="button">Aprovar</button>
+                                        <button class="btn btn-sm btn-outline-secondary" type="button">Ver Cadastro</button>
+                                        <button class="btn btn-sm btn-outline-danger" type="button">Desativar</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Via Norte Veículos</td>
+                                <td>Manaus / AM</td>
+                                <td>Básico</td>
+                                <td><time datetime="2024-05-12">12/05/2024</time></td>
+                                <td><span class="badge bg-secondary">Pendente</span></td>
+                                <td>
+                                    <div class="d-flex gap-1" role="group" aria-label="Ações para Via Norte Veículos">
+                                        <button class="btn btn-sm btn-outline-success" type="button">Aprovar</button>
+                                        <button class="btn btn-sm btn-outline-secondary" type="button">Ver Cadastro</button>
+                                        <button class="btn btn-sm btn-outline-danger" type="button">Desativar</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+        <section aria-labelledby="titulo-crescimento" class="mb-5">
+            <h2 id="titulo-crescimento" class="visually-hidden">Crescimento de agências e atividades recentes</h2>
+
+            <div class="row g-4">
+
+                <div class="col-lg-8">
+                    <div class="card p-3 h-100">
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h5 mb-0" id="titulo-grafico">Crescimento de Agências</h3>
+
+                            <label for="periodo-grafico" class="visually-hidden">
+                                Selecionar período do gráfico
+                            </label>
+                            <select
+                                id="periodo-grafico"
+                                class="form-select form-select-sm"
+                                style="width: 180px;"
+                                aria-labelledby="titulo-grafico"
+                            >
+                                <option selected>Últimos 6 meses</option>
+                                <option>Últimos 12 meses</option>
+                                <option>Últimos 24 meses</option>
+                            </select>
+                        </div>
+
+                        <div style="height: 350px;">
+                            <canvas
+                                id="meuGrafico"
+                                role="img"
+                                aria-label="Gráfico de linha: crescimento de agências ativas de 850 em dezembro de 2023 a 1.248 em maio de 2024"
+                            ></canvas>
+                        </div>
+
                     </div>
-<div class="card p-3 h-100">
+                </div>
+                <div class="col-lg-4">
+                    <div class="card p-3 h-100">
 
-<!-- Linha Gráfico + Atividades -->
-<div class="row g-4 mt-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h5 mb-0">Atividades Recentes</h3>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Ver todas</a>
+                        </div>
+                        <ol class="list-group list-group-flush list-unstyled" aria-label="Últimas atividades do sistema">
 
-    <!-- Gráfico -->
-    <div class="col-lg-8">
-        <div class="card p-3 h-100">
+                            <li class="list-group-item px-0">
+                                <strong>Nova Agência Cadastrada</strong>
+                                <p class="mb-0">Auto Sul Motors (Curitiba/PR)</p>
+                                <small class="text-muted">
+                                    <time datetime="PT5M" title="Há 5 minutos">Há 5 min</time>
+                                </small>
+                            </li>
 
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h5 class="mb-0">Crescimento de Agências</h5>
+                            <li class="list-group-item px-0">
+                                <strong>Plano Atualizado</strong>
+                                <p class="mb-0">Prime Veículos → Profissional</p>
+                                <small class="text-muted">
+                                    <time datetime="PT20M" title="Há 20 minutos">Há 20 min</time>
+                                </small>
+                            </li>
 
-                <select class="form-select form-select-sm" style="width:180px;">
-                    <option selected>Últimos 6 meses</option>
-                    <option>Últimos 12 meses</option>
-                    <option>Últimos 24 meses</option>
-                </select>
+                            <li class="list-group-item px-0">
+                                <strong>Novo Veículo</strong>
+                                <p class="mb-0">Honda Civic EXL 2.0</p>
+                                <small class="text-muted">
+                                    <time datetime="PT1H" title="Há 1 hora">Há 1 hora</time>
+                                </small>
+                            </li>
+
+                            <li class="list-group-item px-0">
+                                <strong>Pagamento Aprovado</strong>
+                                <p class="mb-0">Plano Premium – BH Motors</p>
+                                <small class="text-muted">
+                                    <time datetime="PT3H" title="Há 3 horas">Há 3 horas</time>
+                                </small>
+                            </li>
+
+                            <li class="list-group-item px-0">
+                                <strong>Agência Desativada</strong>
+                                <p class="mb-0">Top Motors</p>
+                                <small class="text-muted">
+                                    <time datetime="P1D" title="Há 1 dia">Há 1 dia</time>
+                                </small>
+                            </li>
+
+                        </ol>
+
+                    </div>
+                </div>
+
             </div>
+        </section>
 
-            <div style="height:350px;">
-                <canvas id="meuGrafico"></canvas>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Atividades -->
-    <div class="col-lg-4">
-        <div class="card p-3 h-100">
-
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h5 class="mb-0">Atividades Recentes</h5>
-                <a href="#" class="btn btn-sm btn-outline-secondary">
-                    Ver todas
-                </a>
-            </div>
-
-            <ul class="list-group list-group-flush">
-
-                <li class="list-group-item">
-                    <strong>Nova Agência Cadastrada</strong><br>
-                    Auto Sul Motors (Curitiba/PR)
-                    <small class="text-muted d-block">Há 5 min</small>
-                </li>
-
-                <li class="list-group-item">
-                    <strong>Plano Atualizado</strong><br>
-                    Prime Veículos → Profissional
-                    <small class="text-muted d-block">Há 20 min</small>
-                </li>
-
-                <li class="list-group-item">
-                    <strong>Novo Veículo</strong><br>
-                    Honda Civic EXL 2.0
-                    <small class="text-muted d-block">Há 1 hora</small>
-                </li>
-
-                <li class="list-group-item">
-                    <strong>Pagamento Aprovado</strong><br>
-                    Plano Premium - BH Motors
-                    <small class="text-muted d-block">Há 3 horas</small>
-                </li>
-
-                <li class="list-group-item">
-                    <strong>Agência Desativada</strong><br>
-                    Top Motors
-                    <small class="text-muted d-block">Há 1 dia</small>
-                </li>
-
-            </ul>
-
-        </div>
-    </div>
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script>
-const ctx = document.getElementById('meuGrafico');
-
-new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: [
-            'Dez/23',
-            'Jan/24',
-            'Fev/24',
-            'Mar/24',
-            'Abr/24',
-            'Mai/24'
-        ],
-        datasets: [{
-            label: 'Agências Ativas',
-            data: [850, 920, 980, 1080, 1170, 1248],
-            borderColor: '#dc3545',
-            backgroundColor: 'rgba(220,53,69,0.15)',
-            fill: true,
-            tension: 0.4,
-            pointRadius: 4,
-            pointBackgroundColor: '#dc3545'
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-            title: {
-                display: true,
-                text: 'Crescimento de Agências'
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('meuGrafico');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Dez/23', 'Jan/24', 'Fev/24', 'Mar/24', 'Abr/24', 'Mai/24'],
+                datasets: [{
+                    label: 'Agências Ativas',
+                    data: [850, 920, 980, 1080, 1170, 1248],
+                    borderColor: '#dc3545',
+                    backgroundColor: 'rgba(220,53,69,0.15)',
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 4,
+                    pointBackgroundColor: '#dc3545'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: true, text: 'Crescimento de Agências' },
+                    legend: { labels: { font: { size: 13 } } }
+                },
+                scales: { y: { beginAtZero: false } }
             }
-        }
-    }
-});
-</script>
+        });
+    </script>
+
 </body>
 </html>
