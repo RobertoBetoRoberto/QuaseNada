@@ -33,6 +33,10 @@
     background-color: #ae5202;
     border-color: #ae5202;
 }
+.btn-primary:focus{
+    background-color: #ae5202;
+    border-color: #ae5202;
+}
 .navbar-nav .nav-link.active{
     border-bottom: 3px solid #ae5202;
     font-weight: bold;
@@ -43,6 +47,11 @@
     color: white;
 }
 .btn-outline-secondary:hover{
+    background-color: #ae5202;
+    border-color: #ae5202;
+    color: white;
+}
+.btn-outline-secondary:focus{
     background-color: #ae5202;
     border-color: #ae5202;
     color: white;
