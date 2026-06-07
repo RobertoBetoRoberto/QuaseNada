@@ -19,6 +19,12 @@
 .bg-cinza-claro {
     background-color: #0b1a33;
 }
+.bg-verde{
+    background-color: #088b3a;
+}
+.bg-vermelho{
+    background-color: #a10606;
+}
 .btn-primary{
     background-color: #e67e22;
     border-color: #e67e22;
