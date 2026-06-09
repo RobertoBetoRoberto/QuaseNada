@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeuCarro Marketplace - Cadastrar veículo</title>
+
+  <!-- Bootstrap -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+</head>
+
+<body>
+
+  <!-- NAVBAR - EXATAMENTE IGUAL À DO ENCONTRAR CARRO -->
+  <nav class="navbar navbar-expand-lg bg-cinza-claro navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html" aria-label="Auto Leste - Página Inicial">
+        <img src="./img/logo-agencia.svg" alt="" role="presentation" class="img-logo-agencia">
+        <span>Meu Carro</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Comprar</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Vender</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Lojas</a></li>
+          <button class="btn btn-primary btn-lg px-4 py-2">Area do Lojista</button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="container mt-5 pt-4" tabindex="-1">
+    
+    <!-- HERO SECTION - MESMO ESTILO -->
+    <section class="container-fluid py-4">
+      <div class="hero-box">
+        <div class="text-center mb-5">
+          <h1 class="hero-title">Cadastrar novo veículo</h1>
+          <p class="hero-subtitle">Preencha os dados abaixo para criar um anúncio profissional e vender mais rápido.</p>
+        </div>
+
+        <div class="hero-info mt-4 d-flex justify-content-between flex-wrap gap-2">
+          <span><i class="bi bi-shield-check"></i> Anúncio seguro</span>
+          <span><i class="bi bi-tags"></i> Destaque seu carro</span>
+          <span><i class="bi bi-geo-alt"></i> Alcance nacional</span>
+          <span><i class="bi bi-lock"></i> Dados protegidos</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="row g-4">
+      
+      <!-- SIDEBAR - FORMULÁRIO -->
+      <aside class="col-lg-4">
+        <div class="sidebar-box">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="fw-bold mb-0">Informações do veículo</h4>
+            <a href="#" class="small text-secondary text-decoration-none">Limpar tudo</a>
+          </div>
+
+          <!-- Marca -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Marca</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <select class="form-select" name="marca">
+              <option>Selecione uma marca</option>
+              <option>Volkswagen</option>
+              <option>Fiat</option>
+              <option>Chevrolet</option>
+              <option>Toyota</option>
+              <option>Honda</option>
+              <option>Hyundai</option>
+              <option>Renault</option>
+              <option>Nissan</option>
+              <option>Ford</option>
+              <option>Jeep</option>
+            </select>
+          </div>
+
+          <!-- Modelo -->
+          <div class="mb-4 border-top pt-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Modelo</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <input type="text" class="form-control" name="modelo" placeholder="Ex.: Corolla, Civic, T-Cross">
+          </div>
+
+          <!-- Ano -->
+          <div class="mb-4 border-top pt-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Ano</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <div class="d-flex gap-2">
+              <select class="form-select" name="ano_fabricacao">
+                <option>Ano fabricação</option>
+                <option>2025</option>
+                <option>2024</option>
+                <option>2023</option>
+                <option>2022</option>
+                <option>2021</option>
+                <option>2020</option>
+                <option>2019</option>
+                <option>2018</option>
+                <option>2017</option>
+                <option>2016</option>
+                <option>2015</option>
+              </select>
+              <select class="form-select" name="ano_modelo">
+                <option>Ano modelo</option>
+                <option>2025</option>
+                <option>2024</option>
+                <option>2023</option>
+                <option>2022</option>
+                <option>2021</option>
+                <option>2020</option>
+                <option>2019</option>
+                <option>2018</option>
+                <option>2017</option>
+                <option>2016</option>
+                <option>2015</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Quilometragem -->
+          <div class="mb-4 border-top pt-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Quilometragem</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <div class="input-group">
+              <input type="number" class="form-control" name="km" placeholder="Ex.: 48000">
+              <span class="input-group-text bg-white">km</span>
+            </div>
+          </div>
+
+          <!-- Preço -->
+          <div class="mb-4 border-top pt-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Preço</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text bg-white">R$</span>
+              <input type="text" class="form-control" name="preco" placeholder="Ex.: 96900">
+            </div>
+          </div>
+
+          <!-- Combustível -->
+          <div class="mb-4 border-top pt-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Combustível</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <select class="form-select" name="combustivel">
+              <option>Flex</option>
+              <option>Gasolina</option>
+              <option>Etanol</option>
+              <option>Diesel</option>
+              <option>Elétrico</option>
+              <option>Híbrido</option>
+            </select>
+          </div>
+
+          <!-- Câmbio -->
+          <div class="mb-4 border-top pt-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Câmbio</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <select class="form-select" name="cambio">
+              <option>Manual</option>
+              <option>Automático</option>
+              <option>CVT</option>
+              <option>Automatizado</option>
+            </select>
+          </div>
+
+          <!-- Cor -->
+          <div class="mb-4 border-top pt-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Cor</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <input type="text" class="form-control" name="cor" placeholder="Ex.: Prata, Preto, Branco">
+          </div>
+
+          <!-- Descrição -->
+          <div class="mb-4 border-top pt-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Descrição</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <textarea class="form-control" rows="3" name="descricao" placeholder="Descreva o veículo, seus diferenciais, estado de conservação..."></textarea>
+          </div>
+
+          <!-- Opcionais -->
+          <div class="mb-4 border-top pt-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Opcionais</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <label><input type="checkbox" name="opcionais" value="ar_condicionado"> Ar condicionado</label>
+              <label><input type="checkbox" name="opcionais" value="direcao_eletrica"> Direção elétrica</label>
+              <label><input type="checkbox" name="opcionais" value="vidros_eletricos"> Vidros elétricos</label>
+              <label><input type="checkbox" name="opcionais" value="sensor_re"> Sensor de ré</label>
+              <label><input type="checkbox" name="opcionais" value="camera_re"> Câmera de ré</label>
+              <label><input type="checkbox" name="opcionais" value="rodas_liga"> Rodas de liga</label>
+              <label><input type="checkbox" name="opcionais" value="teto_solar"> Teto solar</label>
+              <label><input type="checkbox" name="opcionais" value="banco_couro"> Banco de couro</label>
+            </div>
+          </div>
+
+          <!-- Nome da loja -->
+          <div class="mb-4 border-top pt-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Nome da loja</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <input type="text" class="form-control" name="nome_loja" placeholder="Ex.: Auto Norte Multimarcas">
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="mb-4 border-top pt-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>WhatsApp</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <input type="tel" class="form-control" name="whatsapp" placeholder="(11) 99999-9999">
+          </div>
+
+          <!-- Cidade / Região -->
+          <div class="mb-4 border-top pt-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Cidade / Região</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <input type="text" class="form-control" name="cidade" placeholder="São Paulo - SP">
+          </div>
+
+          <!-- Fotos do veículo -->
+          <div class="mb-4 border-top pt-4">
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Fotos do veículo</strong>
+              <span><i class="bi bi-chevron-up"></i></span>
+            </div>
+            <div class="mt-2">
+              <input type="file" name="fotos" multiple accept="image/jpeg,image/png,image/jpg" class="form-control">
+              <small class="text-muted">Selecione até 10 fotos</small>
+            </div>
+          </div>
+
+          <!-- Botões de ação -->
+          <div class="d-flex gap-3 mt-4">
+            <button type="reset" class="btn btn-outline-secondary flex-grow-1">
+              <i class="bi bi-x-circle"></i> Cancelar
+            </button>
+            <button type="submit" class="btn btn-primary flex-grow-1">
+              <i class="bi bi-check-circle"></i> Publicar anúncio
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- CONTEÚDO DIREITO - INFORMAÇÕES -->
+      <section class="col-lg-8">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+          <h4 class="fw-bold mb-0">Informações do anúncio</h4>
+          <span class="badge bg-success">
+            <i class="bi bi-info-circle"></i> Formulário de cadastro
+          </span>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card car-card h-100">
+              <div class="card-image">
+                <div style="height: 200px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center;">
+                  <i class="bi bi-image fs-1 text-secondary"></i>
+                </div>
+                <button class="favorite-btn btn btn-sm position-absolute top-0 end-0 m-2" style="pointer-events: none;">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+              <div class="card-body">
+                <h5 class="fw-bold">Pré-visualização do anúncio</h5>
+                <small class="text-secondary">Os dados aparecerão aqui após o cadastro</small>
+                <h3 class="price-text">R$ 0,00</h3>
+                <div class="d-flex gap-3 small text-secondary mb-2">
+                  <span><i class="bi bi-speedometer2"></i> 0 km</span>
+                  <span><i class="bi bi-fuel-pump"></i> Flex</span>
+                </div>
+                <div class="d-flex gap-3 small text-secondary mb-2">
+                  <span><i class="bi bi-gear"></i> Manual</span>
+                  <span><i class="bi bi-palette"></i> Cor</span>
+                </div>
+                <p class="small"><i class="bi bi-geo-alt"></i> Cidade - UF</p>
+                <div class="store-name"><i class="bi bi-shop"></i> Nome da loja</div>
+                <div class="mt-2 pt-2 border-top">
+                  <div class="small text-muted">Preencha o formulário ao lado para criar seu anúncio</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Dicas para o anúncio -->
+        <div class="alert alert-info mt-4" role="alert">
+          <i class="bi bi-lightbulb-fill"></i>
+          <strong>Dicas para um anúncio de sucesso:</strong>
+          <ul class="mb-0 mt-2">
+            <li>Adicione fotos de alta qualidade do veículo</li>
+            <li>Descreva detalhadamente o estado de conservação</li>
+            <li>Informe todos os opcionais do veículo</li>
+            <li>Mantenha o preço competitivo</li>
+          </ul>
+        </div>
+
+        <div class="alert alert-warning mt-3" role="alert">
+          <i class="bi bi-exclamation-triangle-fill"></i>
+          <strong>Atenção:</strong> Após o cadastro, seu anúncio passará por uma análise de qualidade antes de ser publicado.
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS (apenas para componentes interativos como navbar toggler) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
